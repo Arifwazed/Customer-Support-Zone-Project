@@ -3,6 +3,7 @@ import calenderImg from "../../assets/calendar.png"
 
 const Customer = ({customer,setTask,task,setToggle}) => {
     const handletask = (taskData) => {
+        task = task.filter(t => t.id !== taskData.id);
         setTask([...task,taskData]);
         setToggle(true);
     }
