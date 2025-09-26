@@ -1,9 +1,10 @@
 import React from 'react';
 
-const TaskCard = ({card,removeTask,setResolve,resolve,setToggleResolve}) => {
+const TaskCard = ({card,removeTask,setResolve,resolve,setToggleResolve,removeCustomer}) => {
     // console.log("task in taskcard",card.title)
     const handleRemove = () => {
         removeTask(card);
+        removeCustomer(card);
         handleResolve(card);
         setToggleResolve(true);
     }

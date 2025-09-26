@@ -2,9 +2,10 @@ import React, { use } from "react";
 import Customer from "./Customer";
 
 
-const Customers = ({ customerPromise,setTask,task,setToggle }) => {
-  const customerData = use(customerPromise);
+const Customers = ({ customerPromise,setTask,task,setToggle,customerData }) => {
+//   const customerData = use(customerPromise);
   // console.log(customerData)
+  console.log("the new customer ",customerData)
   return (
     <div className="grid grid-col-1 md:grid-cols-2 gap-5 py-3 px-2">
       {/* <div className=" p-3 text-[#627382] bg-white rounded-lg shadow-sm">

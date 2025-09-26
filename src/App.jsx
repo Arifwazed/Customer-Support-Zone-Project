@@ -1,10 +1,11 @@
-import { Suspense, useState } from 'react'
+import { Suspense, use, useState } from 'react'
 import './App.css'
 import Navbar from './component/navbar/Navbar'
 import Banner from './component/banner/Banner'
 import Customers from './component/customer/Customers'
 import Task from './component/task/Task'
 import Resolve from './component/resolve_task/Resolve'
+import React from 'react'
 
 const fetchCustomers = async () => {
   const res = await fetch('./customers.json');
@@ -12,7 +13,11 @@ const fetchCustomers = async () => {
 }
 
 const customerPromise = fetchCustomers();
+
 function App() {
+  const initialCustomers = use(customerPromise);
+  const [customerData,setCustomerData] = useState(initialCustomers)
+
   const [task,setTask] = useState([]);
   // console.log(task)
   const [resolve,setResolve] = useState([]);
@@ -24,7 +29,13 @@ function App() {
     const filterTask = task.filter(c => c.id !== data.id);
     setTask(filterTask);
   }
-  console.log("length of task: ",task.length)
+  // console.log("length of task: ",task.length)
+
+  const removeCustomer = (data) => {
+    const filterCustomerData = customerData.filter(customer => customer.id !== data.id);
+    setCustomerData(filterCustomerData);
+    // console.log("the new customer ",customerData)
+  }
   
 
   return (
@@ -38,12 +49,12 @@ function App() {
         <div>
         <h1 className='font-semibold text-xl '>Customer Tickets</h1>
         <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
-        <Customers customerPromise={customerPromise} setTask={setTask} task={task} setToggle={setToggle}></Customers>
+        <Customers customerPromise={customerPromise} setTask={setTask} task={task} setToggle={setToggle} customerData={customerData}></Customers>
         </Suspense>
         </div>
         <div className='md:w-[600px] bg-blue-200 p-2'>
           {/* <div><h1 className='font-semibold text-xl '>Task Status</h1></div> */}
-          <Task task={task} removeTask={removeTask} resolve={resolve} setResolve={setResolve} toggle={toggle} setToggle={setToggle} setToggleResolve={setToggleResolve}></Task>
+          <Task task={task} removeTask={removeTask} resolve={resolve} setResolve={setResolve} toggle={toggle} setToggle={setToggle} setToggleResolve={setToggleResolve} removeCustomer={removeCustomer}></Task>
           {/* <div><h1 className='font-semibold text-xl '>Resolved Task</h1></div> */}
           <Resolve resolve={resolve} toggleResolve={toggleResolve}></Resolve>
         </div>

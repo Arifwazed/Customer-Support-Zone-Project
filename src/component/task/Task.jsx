@@ -1,11 +1,10 @@
 import React from 'react';
 import TaskCard from './TaskCard';
 
-const Task = ({task,removeTask,setResolve,resolve,toggle,setToggle,setToggleResolve}) => {
+const Task = ({task,removeTask,setResolve,resolve,toggle,setToggle,setToggleResolve,removeCustomer}) => {
     if(task.length === 0 ){
     setToggle(false)
-
-  }
+    }
     // console.log("task in taskfiled",task)
     return (
         <div>
@@ -17,7 +16,7 @@ const Task = ({task,removeTask,setResolve,resolve,toggle,setToggle,setToggleReso
             
             {
                 toggle ? 
-                task.map(card => <TaskCard card={card} removeTask={removeTask} setResolve={setResolve} resolve={resolve} setToggleResolve={setToggleResolve}></TaskCard>) : <h1>Select a ticket to add to Task Status</h1>
+                task.map(card => <TaskCard card={card} removeTask={removeTask} setResolve={setResolve} resolve={resolve} setToggleResolve={setToggleResolve} removeCustomer={removeCustomer}></TaskCard>) : <h1>Select a ticket to add to Task Status</h1>
             }
         </div>
     );
