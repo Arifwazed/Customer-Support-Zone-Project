@@ -2,7 +2,7 @@ import React, { use } from "react";
 import Customer from "./Customer";
 
 
-const Customers = ({ customerPromise,setTask,task }) => {
+const Customers = ({ customerPromise,setTask,task,setToggle }) => {
   const customerData = use(customerPromise);
   // console.log(customerData)
   return (
@@ -54,7 +54,7 @@ const Customers = ({ customerPromise,setTask,task }) => {
         </div>
       </div> */}
       {
-        customerData.map(customer => <Customer customer={customer} setTask={setTask} task={task}></Customer>)
+        customerData.map(customer => <Customer customer={customer} setTask={setTask} task={task} setToggle={setToggle}></Customer>)
       }
 
     </div>

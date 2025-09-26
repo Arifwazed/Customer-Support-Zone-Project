@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskCard from './TaskCard';
 
-const Task = ({task,removeTask,setResolve,resolve}) => {
+const Task = ({task,removeTask,setResolve,resolve,toggle}) => {
     // console.log("task in taskfiled",task)
     return (
         <div>
@@ -12,7 +12,8 @@ const Task = ({task,removeTask,setResolve,resolve}) => {
             </div> */}
             
             {
-                task.map(card => <TaskCard card={card} removeTask={removeTask} setResolve={setResolve} resolve={resolve}></TaskCard>)
+                toggle ? 
+                task.map(card => <TaskCard card={card} removeTask={removeTask} setResolve={setResolve} resolve={resolve}></TaskCard>) : <h1>Select a ticket to add to Task Status</h1>
             }
         </div>
     );

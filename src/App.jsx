@@ -16,7 +16,8 @@ function App() {
   const [task,setTask] = useState([]);
   // console.log(task)
   const [resolve,setResolve] = useState([]);
-  console.log('Resolve values: ' ,resolve)
+  // console.log('Resolve values: ' ,resolve)
+  const [toggle,setToggle] = useState(false)
   const removeTask = (data) => {
     console.log('Remove action')
     const filterTask = task.filter(c => c.id !== data.id);
@@ -34,12 +35,12 @@ function App() {
         <div>
         <h1 className='font-semibold text-xl '>Customer Tickets</h1>
         <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
-        <Customers customerPromise={customerPromise} setTask={setTask} task={task}></Customers>
+        <Customers customerPromise={customerPromise} setTask={setTask} task={task} setToggle={setToggle}></Customers>
         </Suspense>
         </div>
         <div className='md:w-[600px] bg-blue-200 p-2'>
           {/* <div><h1 className='font-semibold text-xl '>Task Status</h1></div> */}
-          <Task task={task} removeTask={removeTask} resolve={resolve} setResolve={setResolve}></Task>
+          <Task task={task} removeTask={removeTask} resolve={resolve} setResolve={setResolve} toggle={toggle}></Task>
           {/* <div><h1 className='font-semibold text-xl '>Resolved Task</h1></div> */}
           <Resolve resolve={resolve}></Resolve>
         </div>

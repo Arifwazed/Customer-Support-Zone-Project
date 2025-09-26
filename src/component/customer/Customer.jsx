@@ -1,9 +1,10 @@
 import React from 'react';
 import calenderImg from "../../assets/calendar.png"
 
-const Customer = ({customer,setTask,task}) => {
+const Customer = ({customer,setTask,task,setToggle}) => {
     const handletask = (taskData) => {
         setTask([...task,taskData]);
+        setToggle(true);
     }
     // console.log(customer)
     return (
