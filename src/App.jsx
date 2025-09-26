@@ -17,12 +17,15 @@ function App() {
   // console.log(task)
   const [resolve,setResolve] = useState([]);
   // console.log('Resolve values: ' ,resolve)
-  const [toggle,setToggle] = useState(false)
+  const [toggle,setToggle] = useState(false);
+  const [toggleResolve,setToggleResolve] = useState(false)
   const removeTask = (data) => {
     console.log('Remove action')
     const filterTask = task.filter(c => c.id !== data.id);
     setTask(filterTask);
   }
+  console.log("length of task: ",task.length)
+  
 
   return (
     <>
@@ -40,9 +43,9 @@ function App() {
         </div>
         <div className='md:w-[600px] bg-blue-200 p-2'>
           {/* <div><h1 className='font-semibold text-xl '>Task Status</h1></div> */}
-          <Task task={task} removeTask={removeTask} resolve={resolve} setResolve={setResolve} toggle={toggle}></Task>
+          <Task task={task} removeTask={removeTask} resolve={resolve} setResolve={setResolve} toggle={toggle} setToggle={setToggle} setToggleResolve={setToggleResolve}></Task>
           {/* <div><h1 className='font-semibold text-xl '>Resolved Task</h1></div> */}
-          <Resolve resolve={resolve}></Resolve>
+          <Resolve resolve={resolve} toggleResolve={toggleResolve}></Resolve>
         </div>
       </div>
       </div>
