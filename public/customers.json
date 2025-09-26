@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Login issue on website",
+    "description": "Customer reports being unable to log in using Google account integration. The login button redirects to Google, but after authentication it returns an error page instead of logging in. Issue started after the latest website update.",
+    "customer": "John Doe",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "01/09/2025"
+  },
+  {
+    "id": 2,
+    "title": "Payment failed",
+    "description": "Customer attempted to pay with a valid credit card, but the transaction was declined multiple times despite sufficient balance. The customer is worried their order might be cancelled if not resolved quickly.",
+    "customer": "Alice Smith",
+    "priority": "CRITICAL PRIORITY",
+    "status": "In Progress",
+    "createdAt": "02/09/2025"
+  },
+  {
+    "id": 3,
+    "title": "Password reset email not received",
+    "description": "Customer tried resetting their password three times. They did not receive the reset link in either inbox or spam folder. The issue may be related to the email server not triggering notifications.",
+    "customer": "Michael Johnson",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "03/09/2025"
+  },
+  {
+    "id": 4,
+    "title": "App crashes on launch",
+    "description": "The mobile app crashes immediately after opening on devices running Android 14. Several customers have reported this issue, suggesting it may be a compatibility problem with the new OS update.",
+    "customer": "Emily Davis",
+    "priority": "HIGH PRIORITY",
+    "status": "In Progress",
+    "createdAt": "04/09/2025"
+  },
+  {
+    "id": 5,
+    "title": "Slow website loading",
+    "description": "Customer reports the website takes over 10 seconds to load on both desktop and mobile. They mentioned the problem occurs mainly during peak hours, which may indicate a server capacity issue.",
+    "customer": "David Wilson",
+    "priority": "LOW PRIORITY",
+    "status": "Resolved",
+    "createdAt": "05/09/2025"
+  },
+  {
+    "id": 6,
+    "title": "Invoice not generated",
+    "description": "After completing the checkout process, the system did not generate an invoice for the last transaction. Customer needs the invoice urgently for reimbursement purposes.",
+    "customer": "Sophia Martinez",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "06/09/2025"
+  },
+  {
+    "id": 7,
+    "title": "Order stuck in processing",
+    "description": "Customer placed an order two days ago, but it is still showing as 'Processing' in the system. The payment has already been deducted from their account. They are frustrated and requesting an update.",
+    "customer": "James Brown",
+    "priority": "HIGH PRIORITY",
+    "status": "In Progress",
+    "createdAt": "07/09/2025"
+  },
+  {
+    "id": 8,
+    "title": "Refund not received",
+    "description": "Customer claims their refund was approved last week, but the money has not yet been credited back to their account. They provided transaction ID and request urgent action.",
+    "customer": "Olivia Garcia",
+    "priority": "CRITICAL PRIORITY",
+    "status": "Open",
+    "createdAt": "08/09/2025"
+  },
+  {
+    "id": 9,
+    "title": "Broken product delivered",
+    "description": "Customer received damaged headphones with a broken headband and non-functioning speakers. They want a replacement or full refund as soon as possible.",
+    "customer": "Daniel Miller",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "09/09/2025"
+  },
+  {
+    "id": 10,
+    "title": "Feature request - Dark mode",
+    "description": "Customer suggests adding a dark mode option to improve usability at night and reduce eye strain. They note that many competitor apps already offer this feature.",
+    "customer": "Ava Anderson",
+    "priority": "LOW PRIORITY",
+    "status": "Closed",
+    "createdAt": "10/09/2025"
+  },
+  {
+    "id": 11,
+    "title": "Subscription auto-renewal failed",
+    "description": "Customer’s premium plan did not auto-renew despite having a valid payment method on file. They temporarily lost access to premium features and request a quick fix.",
+    "customer": "William Taylor",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Resolved",
+    "createdAt": "11/09/2025"
+  },
+  {
+    "id": 12,
+    "title": "Notification issue",
+    "description": "Push notifications are not being delivered to iOS users. Customers are missing important order updates. The issue seems to have started after the last app update.",
+    "customer": "Mia Thomas",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "12/09/2025"
+  },
+  {
+    "id": 13,
+    "title": "Data sync error",
+    "description": "Customer reports that their data is not syncing properly between the mobile and web app. Changes made on one platform are not reflected on the other.",
+    "customer": "Ethan Lee",
+    "priority": "MEDIUM PRIORITY",
+    "status": "In Progress",
+    "createdAt": "13/09/2025"
+  },
+  {
+    "id": 14,
+    "title": "Cart not updating",
+    "description": "Items added to the shopping cart disappear after refreshing the page. Customer tried multiple browsers and devices with the same issue.",
+    "customer": "Isabella Harris",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "14/09/2025"
+  },
+  {
+    "id": 15,
+    "title": "Delayed delivery",
+    "description": "Customer’s package is delayed by 3 days beyond the expected delivery date. Tracking shows no updates since the item left the warehouse.",
+    "customer": "Henry Martin",
+    "priority": "LOW PRIORITY",
+    "status": "Resolved",
+    "createdAt": "15/09/2025"
+  }
+]
