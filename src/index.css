@@ -2,3 +2,9 @@
 @plugin "daisyui" {
   themes: light --default;
 }
+.footer-title {
+  @apply text-white opacity-100;
+}
+.nav-a{
+  font-style: #A1A1AA;
+}

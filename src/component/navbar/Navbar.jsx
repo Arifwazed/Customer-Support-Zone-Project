@@ -6,8 +6,8 @@ const Navbar = () => {
     <div>
       <div className="navbar bg-base-100 shadow-sm justify-between md:px-15">
         <div className="navbar-start ">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div className="dropdown p-0">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden px-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -49,7 +49,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end ">
-          <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white font-semibold -mr-10 md:mr-auto p-2 md:p-4"><img src={plusImg} alt="" /> New Ticket</a>
+          <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white font-semibold -mr-9 md:mr-auto p-2 md:p-4"><img src={plusImg} alt="" /> New Ticket</a>
         </div>
         </div>
       </div>

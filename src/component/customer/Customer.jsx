@@ -15,8 +15,8 @@ const Customer = ({customer,setTask,task,setToggle}) => {
             <div onClick={() => handletask(customer)} className=" p-3 text-[#627382] bg-white rounded-lg shadow-sm">
                     <div className="flex justify-between items-center">
                       <h1 className="font-semibold text-black text-lg">{customer.title}</h1>
-                      <button className=" rounded-3xl px-3 py-0.5 bg-[#B9F8CF] font-semibold flex justify-center items-center gap-x-2">
-                        <div className="w-3 h-3 rounded-full bg-[#02A53B]"></div>
+                      <button className={` rounded-3xl px-3 py-0.5  font-semibold flex justify-center items-center gap-x-2 ${(customer.status === 'Open') ? "bg-[#B9F8CF]" : "bg-[#F8F3B9]"} `}>
+                        <div className={`w-3 h-3 rounded-full ${(customer.status === 'Open') ? "bg-[#02A53B]" : "bg-[#FEBB0C]"} `}></div>
                         <p>{customer.status}</p>
                       </button>
                     </div>
