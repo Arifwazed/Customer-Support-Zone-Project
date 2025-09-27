@@ -49,15 +49,15 @@ function App() {
 
       <div className='md:px-20 mt-10 flex flex-col md:flex-row gap-5 mb-20'>
         <div>
-        <h1 className='font-semibold text-xl p-2'>Customer Tickets</h1>
+        <h1 className='font-semibold text-xl p-3'>Customer Tickets</h1>
         <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
         <Customers setTask={setTask} task={task} setToggle={setToggle} customerData={customerData}></Customers>
         </Suspense>
         </div>
         <div className='md:w-[900px] p-3'>
-          {/* <div><h1 className='font-semibold text-xl '>Task Status</h1></div> */}
+          
           <Task task={task} removeTask={removeTask} resolve={resolve} setResolve={setResolve} toggle={toggle} setToggle={setToggle} setToggleResolve={setToggleResolve} removeCustomer={removeCustomer}></Task>
-          {/* <div><h1 className='font-semibold text-xl '>Resolved Task</h1></div> */}
+          
           <Resolve resolve={resolve} toggleResolve={toggleResolve}></Resolve>
         </div>
       </div>
