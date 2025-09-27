@@ -48,7 +48,7 @@ const Navbar = () => {
             <li> <a>Contact</a> </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end ">
           <a className="btn bg-linear-to-br from-[#632EE3] to-[#9F62F2] text-white font-semibold -mr-10 md:mr-auto p-2 md:p-4"><img src={plusImg} alt="" /> New Ticket</a>
         </div>
         </div>

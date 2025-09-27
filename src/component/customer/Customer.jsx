@@ -1,11 +1,13 @@
 import React from 'react';
 import calenderImg from "../../assets/calendar.png"
+import { toast } from 'react-toastify';
 
 const Customer = ({customer,setTask,task,setToggle}) => {
     const handletask = (taskData) => {
         task = task.filter(t => t.id !== taskData.id);
         setTask([...task,taskData]);
         setToggle(true);
+        toast('Customer ticket add to task status')
     }
     // console.log(customer)
     return (
@@ -18,11 +20,11 @@ const Customer = ({customer,setTask,task,setToggle}) => {
                         <p>{customer.status}</p>
                       </button>
                     </div>
-                    <p className="my-2">{customer.description}</p>
+                    <p className="my-2 line-clamp-2">{customer.description}</p>
                     <div className="flex justify-between items-center text-sm font-semibold">
                         <div className="flex gap-x-3 ">
                             <h2 className="">#100{customer.id}</h2>
-                            <h2 className="text-[#F83044] ">{customer.priority}</h2>
+                            <h2 className={`${(customer.priority === 'LOW PRIORITY') ? "text-[#02A53B]" : (customer.priority === 'MEDIUM PRIORITY') ? "text-[#FEBB0C]" :"text-[#F83044]"} `}>{customer.priority}</h2>
                         </div>
                         <div className="flex justify-between gap-x-2">
                             <p className="">{customer.customer}</p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const TaskCard = ({card,removeTask,setResolve,resolve,setToggleResolve,removeCustomer}) => {
     // console.log("task in taskcard",card.title)
@@ -7,6 +8,7 @@ const TaskCard = ({card,removeTask,setResolve,resolve,setToggleResolve,removeCus
         removeCustomer(card);
         handleResolve(card);
         setToggleResolve(true);
+        toast('Task Completed')
     }
     const handleResolve = (data) => {
         setResolve([...resolve,data])
